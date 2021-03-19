@@ -1,3 +1,4 @@
+import 'package:animation_fun/colors.dart';
 import 'package:animation_fun/screens/examples/app_bar_with_banner/app_bar_with_banner_screen.dart';
 import 'package:animation_fun/screens/examples/gallery/gallery_screen.dart';
 import 'package:animation_fun/screens/examples/swipe_onboarding/swipe_onboarding_screen.dart';
@@ -9,13 +10,22 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisAlignment: MainAxisAlignment.center,
+      padding: EdgeInsets.all(16),
+      child: GridView.count(
+        crossAxisCount: 2,
+        mainAxisSpacing: 8,
+        crossAxisSpacing: 8,
         children: _getExamplesButtons(context),
       ),
     );
+    // return Container(
+    //   padding: EdgeInsets.all(15),
+    //   child: Column(
+    //     crossAxisAlignment: CrossAxisAlignment.stretch,
+    //     mainAxisAlignment: MainAxisAlignment.center,
+    //     children: _getExamplesButtons(context),
+    //   ),
+    // );
   }
 
   List<Widget> _getExamplesButtons(BuildContext context) {
@@ -27,6 +37,7 @@ class Body extends StatelessWidget {
             builder: (c) => GalleryScreen()
           )
         ),
+        style: TextButton.styleFrom(backgroundColor: ThemeColors.babyBlue),
       ),
       ElevatedButton(
         child: Text('Banner folding to app bar'),
@@ -35,6 +46,7 @@ class Body extends StatelessWidget {
             builder: (c) => AppBarWithBannerScreen()
           )
         ),
+        style: TextButton.styleFrom(backgroundColor: ThemeColors.darkBlue),
       ),
       ElevatedButton(
         child: Text('Swipe Onboarding TODO'),
@@ -43,7 +55,37 @@ class Body extends StatelessWidget {
             builder: (c) => SwipeOnboardingScreen()
           )
         ),
+        style: TextButton.styleFrom(backgroundColor: ThemeColors.blueGray),
       ),
+
+      ElevatedButton(
+        child: Text('1'),
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (c) => GalleryScreen()
+          )
+        ),
+        style: TextButton.styleFrom(backgroundColor: ThemeColors.babyBlue),
+      ),
+      ElevatedButton(
+        child: Text('2'),
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (c) => AppBarWithBannerScreen()
+          )
+        ),
+        style: TextButton.styleFrom(backgroundColor: ThemeColors.darkBlue),
+      ),
+      ElevatedButton(
+        child: Text('3'),
+        onPressed: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (c) => SwipeOnboardingScreen()
+          )
+        ),
+        style: TextButton.styleFrom(backgroundColor: ThemeColors.blueGray),
+      ),
+
     ];
   }
 
