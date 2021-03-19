@@ -7,7 +7,7 @@ class SubTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Text(
-        'Они такие анимирированные, вах',
+        'Красный слайд',
         style: Theme.of(context).textTheme.headline6,
         textAlign: TextAlign.center,
       ),

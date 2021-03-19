@@ -8,6 +8,9 @@ class SwipeOnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('ONBOARDING'),
+      ),
       body: Body(),
     );
   }

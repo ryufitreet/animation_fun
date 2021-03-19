@@ -21,7 +21,7 @@ class _ExtendedAnimatedAppBarState extends State<ExtendedAnimatedAppBar> with Ti
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 250),
+      duration: Duration(milliseconds: 2500),
     );
     _animation = CurvedAnimation(
       parent: _controller,

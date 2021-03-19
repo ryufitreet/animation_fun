@@ -1,6 +1,8 @@
-import 'package:animation_fun/screens/examples/swipe_onboarding/components/slideshow/store/slide_show_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:animation_fun/screens/examples/swipe_onboarding/components/slideshow/store/slide_show_model.dart';
+
+import 'slide.dart';
 
 class Slides extends StatefulWidget {
   const Slides({Key key}) : super(key: key);
@@ -27,7 +29,7 @@ class _SlidesState extends State<Slides> {
           offset: m.currentSlideOffset,
           child: Container(
             width: MediaQuery.of(context).size.width,
-            child: Placeholder(),
+            child: Slide(),
             decoration: BoxDecoration(),
           ),
         ),
