@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components/animated_app_bar.dart';
+import 'components/expanded_animated_app_bar.dart';
 
 class Body extends StatelessWidget {
   const Body({Key key}) : super(key: key);
@@ -9,7 +9,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        AnimatedAppBar(),
+        ExtendedAnimatedAppBar(),
       ],
     );
   }
